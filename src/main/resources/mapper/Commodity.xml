@@ -4,14 +4,7 @@
 
     <select id="getCommodities" parameterType="com.pkyou.Sample.request.GetCommoditiesRequest"
             resultType="com.pkyou.Sample.response.GetCommoditiesResponse">
-		select id,name,detail_pic detailPic,home_pic homePic,point_value pointValue,current_stock currentStock
-		from commodity_detail where display = 1 and
-		<if test="category == -1">
-			1=1
-		</if>
-		<if test="category != -1">
-			category= #{category}
-		</if>
+		select * from HELP
 	</select>
 
 	<select id="getCommodityExchangeRecord" parameterType="com.pkyou.Sample.request.GetCommodityExchangeRecordRequest"
